@@ -1,9 +1,13 @@
+import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
+import java.util.ArrayList;
+
 
 public class Main {
+
     //initialize dynamic length array for processes
     static ArrayList<Process> processes = null;
 
@@ -33,4 +37,12 @@ public class Main {
         }
 
     }
+
+    public static void updateWaitTimes(){
+        for (Process process : processes) {
+            process.addWTime(7);
+        }
+    }
+
+
 }
