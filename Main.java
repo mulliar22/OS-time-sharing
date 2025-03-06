@@ -13,6 +13,7 @@ public class Main {
 
     public static void main(String[] args) {
         loadProcesses();
+
     }
 
     public static void loadProcesses() {
@@ -43,6 +44,21 @@ public class Main {
             process.addWTime(7);
         }
     }
+
+    @Nullable
+    //needs empty array check before
+    public static Process roundRobin(){
+        if (processes[1] = null) return ;
+        Process selection = processes.get(0);
+        processes.remove(0);
+        for (int i = 1; i < processes.size() - 1; i++) {
+
+            proceses[i - 1] = processes[i]
+        }
+        return selection;
+    }
+
+    public static
 
 
 }

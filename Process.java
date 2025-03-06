@@ -11,6 +11,7 @@ public class Process {
         eTime = elapsedTime;
         wTime = waitTime;
 
+
         System.out.println("Process ID: " + id + "totalTime: " + tTime + "elapsedTime: " + eTime + "waitTime: " + wTime);
     }
     public void setID(int id){
