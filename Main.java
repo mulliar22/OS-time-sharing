@@ -11,13 +11,48 @@ import java.util.ArrayList;
 public class Main {
 
     //initialize dynamic length array for processes
-    static ArrayList<Process> processes = null;
+    static ArrayList<Process> processes;
 
     public static void main(String[] args) {
         loadProcesses();
 
-    }
+        Process currentProcess = null;
+        int timeSclice = 5;
+        int delay = 2;
 
+        while (processes.get(0) != null) {
+
+            if (currentProcess.eTime == currentProcess.tTime) {
+                currentProcess = null;
+            }
+
+            if (currentProcess == null) {
+
+                currentProcess = roundRobin();
+
+                processes.trimToSize();
+            }
+            else{
+                Process temp = currentProcess;
+                currentProcess = roundRobin();
+                backToQueue(temp);
+            }
+
+            currentProcess.addWTime(delay);
+            currentProcess.addETime(timeSclice);
+            currentProcess.addWTime(delay);
+
+            for (int i = 1; i < processes.size() - 1; i++) {
+                processes.get(i).addWTime(delay);
+                processes.get(i).addWTime(timeSclice);
+                processes.get(i).addWTime(delay);
+
+            }
+
+        }
+
+    }
+    Process test = new Process(1, 2, 3, 4);
     public static void loadProcesses() {
         try {
             //create new File and Scanner objects
@@ -47,20 +82,26 @@ public class Main {
         }
     }
 
-    @Nullable
+
     //needs empty array check before
     public static Process roundRobin(){
-        if (processes[1] = null) return ;
+        if (processes.get(1) == null){
+            return null;
+        }
         Process selection = processes.get(0);
         processes.remove(0);
         for (int i = 1; i < processes.size() - 1; i++) {
 
-            proceses[i - 1] = processes[i]
+            processes.add(i - 1, processes.get(i));
         }
         return selection;
     }
 
-    public static
+    //Send the working process back to the end of the queue
+    public static void backToQueue(Process lastRun){
+        processes.trimToSize();
+        processes.add(lastRun);
+    }
 
 
 }

@@ -6,10 +6,10 @@ public class Process {
     int wTime;
 
     public Process(int name, int totalTime, int elapsedTime, int waitTime){
-        id = name;
-        tTime = totalTime;
-        eTime = elapsedTime;
-        wTime = waitTime;
+        this.id = name;
+        this.tTime = totalTime;
+        this.eTime = elapsedTime;
+        this.wTime = waitTime;
 
 
         System.out.println("Process ID: " + id + "totalTime: " + tTime + "elapsedTime: " + eTime + "waitTime: " + wTime);
