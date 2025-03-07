@@ -19,9 +19,35 @@ public class Main {
         Process currentProcess = processes.get(0);
         int timeSclice = 5;
         int delay = 2;
-
+        int accumulator = 0;
         //while (processes.get(0) != null) {
         while(processes.size() != 0){
+            accumulator += 2;
+            System.out.println("Process# " + currentProcess.id + " Started at clock cycle " + accumulator);
+            int remain = currentProcess.tTime - currentProcess.eTime;
+
+            if (remain < timeSclice) {
+                currentProcess.addWTime(delay);
+                currentProcess.addETime(remain);
+
+                accumulator +=  remain;
+
+            }
+            else {
+                currentProcess.addWTime(delay);
+                currentProcess.addETime(timeSclice);
+                currentProcess.addWTime(delay);
+                accumulator += timeSclice;
+            }
+
+
+            for (int i = 1; i < processes.size() - 1; i++) {
+                processes.get(i).addWTime(delay);
+                processes.get(i).addWTime(timeSclice);
+                processes.get(i).addWTime(delay);
+
+            }
+
 
             if (currentProcess.eTime >= currentProcess.tTime) {
                 currentProcess = null;
@@ -31,27 +57,17 @@ public class Main {
 
                 currentProcess = roundRobin();
 
-                processes.trimToSize();
+                processes.removeLast();
             }
             else{
                 Process temp = currentProcess;
                 currentProcess = roundRobin();
                 backToQueue(temp);
             }
-
-            currentProcess.addWTime(delay);
-            currentProcess.addETime(timeSclice);
-            currentProcess.addWTime(delay);
-
-            for (int i = 1; i < processes.size() - 1; i++) {
-                processes.get(i).addWTime(delay);
-                processes.get(i).addWTime(timeSclice);
-                processes.get(i).addWTime(delay);
-
-            }
+            System.out.println("Process ended at clock cycle " + accumulator);
 
         }
-
+        System.out.println("All processes ended at clock cycle " + accumulator);
     }
 
     public static void loadProcesses() {
@@ -85,24 +101,17 @@ public class Main {
 
 
     //needs empty array check before
-    @Nullable
     public static Process roundRobin(){
-        if (processes.get(0) == null){
-            return null;
-        }
-        Process selection = processes.get(0);
-        processes.remove(0);
-        for (int i = 1; i < processes.size() - 1; i++) {
+        for (int i = 1; i <= processes.size() - 1; i++) {
 
-            processes.add(i - 1, processes.get(i));
+            processes.set(i - 1, processes.get(i));
         }
-        return selection;
+        return processes.get(0);
     }
 
     //Send the working process back to the end of the queue
     public static void backToQueue(Process lastRun){
-        processes.trimToSize();
-        processes.add(lastRun);
+        processes.set(processes.size() - 1, lastRun);
     }
 
 
