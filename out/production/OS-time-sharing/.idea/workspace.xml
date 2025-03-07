@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e0baee2-681c-4870-af74-c94ff4dd1bc0" name="Changes" comment="Created LoadProcesses function and mock Process class">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process.java" beforeDir="false" afterPath="$PROJECT_DIR$/Process.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/processes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/processes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +124,8 @@
       <updated>1741040970220</updated>
       <workItem from="1741040971253" duration="1755000" />
       <workItem from="1741200876811" duration="21000" />
-      <workItem from="1741200902430" duration="10090000" />
+      <workItem from="1741200902430" duration="12906000" />
+      <workItem from="1741233607014" duration="1693000" />
     </task>
     <task id="LOCAL-00001" summary="Created LoadProcesses function and mock Process class">
       <option name="closed" value="true" />
@@ -151,5 +155,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created LoadProcesses function and mock Process class" />
     <option name="LAST_COMMIT_MESSAGE" value="Created LoadProcesses function and mock Process class" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -11,18 +11,19 @@ import java.util.ArrayList;
 public class Main {
 
     //initialize dynamic length array for processes
-    static ArrayList<Process> processes;
+    static ArrayList<Process> processes = new ArrayList<>();
 
     public static void main(String[] args) {
         loadProcesses();
 
-        Process currentProcess = null;
+        Process currentProcess = processes.get(0);
         int timeSclice = 5;
         int delay = 2;
 
-        while (processes.get(0) != null) {
+        //while (processes.get(0) != null) {
+        while(processes.size() != 0){
 
-            if (currentProcess.eTime == currentProcess.tTime) {
+            if (currentProcess.eTime >= currentProcess.tTime) {
                 currentProcess = null;
             }
 
@@ -52,7 +53,7 @@ public class Main {
         }
 
     }
-    Process test = new Process(1, 2, 3, 4);
+
     public static void loadProcesses() {
         try {
             //create new File and Scanner objects
@@ -84,8 +85,9 @@ public class Main {
 
 
     //needs empty array check before
+    @Nullable
     public static Process roundRobin(){
-        if (processes.get(1) == null){
+        if (processes.get(0) == null){
             return null;
         }
         Process selection = processes.get(0);

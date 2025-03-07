@@ -12,7 +12,7 @@ public class Process {
         this.wTime = waitTime;
 
 
-        System.out.println("Process ID: " + id + "totalTime: " + tTime + "elapsedTime: " + eTime + "waitTime: " + wTime);
+        System.out.println("Process ID: " + id + " totalTime: " + tTime + " elapsedTime: " + eTime + "  waitTime: " + wTime);
     }
     public void setID(int id){
 
