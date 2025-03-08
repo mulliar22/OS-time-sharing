@@ -1,9 +1,5 @@
-import org.jetbrains.annotations.Nullable;
-
-import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Arrays;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -14,21 +10,21 @@ public class Main {
     static ArrayList<Process> processes = new ArrayList<>();
 
     public static void main(String[] args) {
-        loadProcesses();
+        loadProcesses(); //Loads process.txt into the program
 
-        Process currentProcess = processes.get(0);
-        int timeSclice = 5;
-        int delay = 2;
-        int accumulator = 0;
+        Process currentProcess = processes.get(0); //sets current process to the first in the queue
+        int timeSclice = 5; //number of time slices
+        int delay = 2; //delay between process runtimes
+        int accumulator = 0; //total runtime of program
         //while (processes.get(0) != null) {
-        while(processes.size() != 0){
+        while(processes.size() != 0){ //rotates through process queue
             accumulator += 2;
             System.out.println("Process# " + currentProcess.id + " Started at clock cycle " + accumulator);
-            int remain = currentProcess.tTime - currentProcess.eTime;
+            int remain = currentProcess.tTime - currentProcess.eTime; //amount of time remaining in a process
 
-            if (remain < timeSclice) {
-                currentProcess.addWTime(delay);
-                currentProcess.addETime(remain);
+            if (remain < timeSclice) {  //Checks if time remaining is less then time slice
+                currentProcess.addWTime(delay); //adds delay to wait time
+                currentProcess.addETime(remain); //adds remaining time to elapsed time
 
                 accumulator +=  remain;
 
@@ -41,7 +37,7 @@ public class Main {
             }
 
 
-            for (int i = 1; i < processes.size() - 1; i++) {
+            for (int i = 1; i < processes.size() - 1; i++) { //adds time to all the remaining processes
                 processes.get(i).addWTime(delay);
                 processes.get(i).addWTime(timeSclice);
                 processes.get(i).addWTime(delay);
@@ -49,11 +45,11 @@ public class Main {
             }
 
 
-            if (currentProcess.eTime >= currentProcess.tTime) {
+            if (currentProcess.eTime >= currentProcess.tTime) { //removes process if it is completed
                 currentProcess = null;
             }
 
-            if (currentProcess == null) {
+            if (currentProcess == null) { //checks if run process is empty
 
                 currentProcess = roundRobin();
 
@@ -70,7 +66,7 @@ public class Main {
         System.out.println("All processes ended at clock cycle " + accumulator);
     }
 
-    public static void loadProcesses() {
+    public static void loadProcesses() {  //Load Processes
         try {
             //create new File and Scanner objects
             File fileObj = new File("processes.txt");
@@ -101,7 +97,7 @@ public class Main {
 
 
     //needs empty array check before
-    public static Process roundRobin(){
+    public static Process roundRobin(){  //Cycles processes through the arraylist
         for (int i = 1; i <= processes.size() - 1; i++) {
 
             processes.set(i - 1, processes.get(i));
@@ -110,7 +106,7 @@ public class Main {
     }
 
     //Send the working process back to the end of the queue
-    public static void backToQueue(Process lastRun){
+    public static void backToQueue(Process lastRun){ //Sends the last ran process back to the bottom of the queue
         processes.set(processes.size() - 1, lastRun);
     }
 
