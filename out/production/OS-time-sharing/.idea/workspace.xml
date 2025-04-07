@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2d2764b-aaf5-430b-a1a7-3b40d7976eab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/PriorityCycle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OS-time-sharing/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OS-time-sharing/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OS-time-sharing/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OS-time-sharing/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/RoundRobinCycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process.java" beforeDir="false" afterPath="$PROJECT_DIR$/Process.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OS-time-sharing/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OS-time-sharing/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OS-time-sharing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OS-time-sharing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OS-time-sharing/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OS-time-sharing/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OS-time-sharing/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OS-time-sharing/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OS-time-sharing/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OS-time-sharing/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OS-time-sharing/processes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OS-time-sharing/processes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/processes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/processes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +55,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -81,6 +88,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PriorityCycle.executor&quot;: &quot;Run&quot;,
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
     &quot;Gradle.OS-time-sharing.executor&quot;: &quot;Run&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
@@ -104,6 +112,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="OS-time-sharing" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
@@ -129,8 +142,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.39" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.39" />
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
       </set>
     </attachedChunks>
   </component>
@@ -146,7 +159,9 @@
       <workItem from="1741205781552" duration="1299000" />
       <workItem from="1741215075472" duration="5286000" />
       <workItem from="1741390011334" duration="996000" />
-      <workItem from="1741395838537" duration="1782000" />
+      <workItem from="1741395838537" duration="2477000" />
+      <workItem from="1741803977746" duration="687000" />
+      <workItem from="1744049607798" duration="5266000" />
     </task>
     <servers />
   </component>

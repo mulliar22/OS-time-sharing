@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 
-public class Main {
+public class RoundRobinCycle {
 
     //initialize dynamic length array for processes
     static ArrayList<Process> processes = new ArrayList<>();
@@ -79,7 +79,7 @@ public class Main {
                 System.out.println(data);
 
                 // create new process instances and add them to the list of processes
-                processes.add(new Process(Integer.parseInt(data[0]), Integer.parseInt(data[1]), Integer.parseInt(data[2]), Integer.parseInt(data[3])));
+                processes.add(new Process(Integer.parseInt(data[0]), Integer.parseInt(data[1]), Integer.parseInt(data[2]), Integer.parseInt(data[3]), Integer.parseInt(data[4])));
             }
 
             myReader.close();
@@ -89,11 +89,6 @@ public class Main {
 
     }
 
-    public static void updateWaitTimes(){
-        for (Process process : processes) {
-            process.addWTime(7);
-        }
-    }
 
 
     //needs empty array check before
