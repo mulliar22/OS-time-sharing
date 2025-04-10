@@ -19,7 +19,7 @@ public class PriorityCycle {
         //while (processes.get(0) != null) {
         while(processes.size() != 0){ //rotates through process queue
             accumulator += 2;
-            System.out.println("Process# " + currentProcess.id + " Started at clock cycle " + accumulator);
+            System.out.println("Process# " + currentProcess.id + " with Priority " + currentProcess.priority + " Started at clock cycle " + accumulator);
             int remain = currentProcess.tTime - currentProcess.eTime; //amount of time remaining in a process
 
             if (remain < timeSclice) {  //Checks if time remaining is less then time slice

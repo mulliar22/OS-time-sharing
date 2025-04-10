@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2d2764b-aaf5-430b-a1a7-3b40d7976eab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PriorityCycle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/RoundRobinCycle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Process.java" beforeDir="false" afterPath="$PROJECT_DIR$/Process.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OS-time-sharing/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OS-time-sharing/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OS-time-sharing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OS-time-sharing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OS-time-sharing/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OS-time-sharing/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OS-time-sharing/processes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OS-time-sharing/processes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/processes.txt" afterDir="false" />
-    </list>
+    <list default="true" id="e2d2764b-aaf5-430b-a1a7-3b40d7976eab" name="Changes" comment="Added PriorityCycle" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -162,7 +152,17 @@
       <workItem from="1741395838537" duration="2477000" />
       <workItem from="1741803977746" duration="687000" />
       <workItem from="1744049607798" duration="5266000" />
+      <workItem from="1744055275114" duration="635000" />
     </task>
+    <task id="LOCAL-00001" summary="Added PriorityCycle">
+      <option name="closed" value="true" />
+      <created>1744055389548</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744055389548</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,5 +178,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added PriorityCycle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added PriorityCycle" />
   </component>
 </project>
