@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2d2764b-aaf5-430b-a1a7-3b40d7976eab" name="Changes" comment="Added PriorityCycle" />
+    <list default="true" id="e2d2764b-aaf5-430b-a1a7-3b40d7976eab" name="Changes" comment="Fixed the PriorityCycle to include time slices">
+      <change beforePath="$PROJECT_DIR$/PriorityCycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/PriorityCycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OS-time-sharing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OS-time-sharing/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +67,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/mulliar22/OS-time-sharing.git&quot;,
-    &quot;accountId&quot;: &quot;92e1ccff-9d05-4ba3-a3e9-bcaf2864e26d&quot;
+    &quot;accountId&quot;: &quot;d68649b6-1051-473f-9f67-b631bf2abcc3&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -79,6 +82,7 @@
   &quot;keyToString&quot;: {
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.PriorityCycle.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RoundRobinCycle.executor&quot;: &quot;Run&quot;,
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
     &quot;Gradle.OS-time-sharing.executor&quot;: &quot;Run&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
@@ -89,7 +93,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/amull/IdeaProjects/OS-time-sharing/build.gradle&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/amull/IdeaProjects/OS-time-sharing&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -153,6 +157,12 @@
       <workItem from="1741803977746" duration="687000" />
       <workItem from="1744049607798" duration="5266000" />
       <workItem from="1744055275114" duration="635000" />
+      <workItem from="1744310227841" duration="455000" />
+      <workItem from="1744310714677" duration="101000" />
+      <workItem from="1744393979673" duration="36000" />
+      <workItem from="1744395780196" duration="257000" />
+      <workItem from="1744477104295" duration="4195000" />
+      <workItem from="1744481350055" duration="635000" />
     </task>
     <task id="LOCAL-00001" summary="Added PriorityCycle">
       <option name="closed" value="true" />
@@ -162,7 +172,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744055389548</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Modified Output text / added priority numbers to processes.txt">
+      <option name="closed" value="true" />
+      <created>1744310767824</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744310767824</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fixed the PriorityCycle to include time slices">
+      <option name="closed" value="true" />
+      <created>1744481242434</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744481242434</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +207,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added PriorityCycle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added PriorityCycle" />
+    <MESSAGE value="Added Modified Output text / added priority numbers to processes.txt" />
+    <MESSAGE value="Fixed the PriorityCycle to include time slices" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the PriorityCycle to include time slices" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

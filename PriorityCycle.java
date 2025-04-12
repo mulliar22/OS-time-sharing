@@ -58,27 +58,30 @@ public class PriorityCycle {
                 } else {
                     currentProcess.addWTime(delay);
                     currentProcess.addETime(timeSclice);
-                    currentProcess.addWTime(delay);
                     accumulator += timeSclice;
                 }
 
 
-                for (int i = 1; i < processes.size() - 1; i++) { //adds time to all the remaining processes
-                    processes.get(i).addWTime(delay);
-                    processes.get(i).addWTime(timeSclice);
-                    processes.get(i).addWTime(delay);
+                for (int i = 0; i < processes.size() - 1; i++) { //adds time to all the remaining processes
 
+                    if (processes.get(i).priority <= priorityCount) {
+                        processes.get(i).addWTime(delay);
+
+                        if (remain < timeSclice) {  //Checks if time remaining is less then time slice
+                            if (processes.get(i).id != currentProcess.id) {
+                                processes.get(i).addWTime(remain); //adds remaining time to elapsed time
+                            }
+                        } else {
+                            if (processes.get(i).id != currentProcess.id) {
+                                processes.get(i).addWTime(timeSclice); //adds remaining time to elapsed time
+                            }
+                        }
+                    }
                 }
 
-                for (int i = 1; i < priorityProcesses.size() - 1; i++) { //adds time to all the remaining processes
-                    priorityProcesses.get(i).addWTime(delay);
-                    priorityProcesses.get(i).addWTime(timeSclice);
-                    priorityProcesses.get(i).addWTime(delay);
 
-                }
-
-
-                if (currentProcess.eTime >= currentProcess.tTime) { //removes process if it is completed
+                if (currentProcess.eTime >= currentProcess.tTime) {//removes process if it is completed
+                    System.out.println("Process " + currentProcess.id + " completed at " + accumulator + " with a total waiting time of " + currentProcess.wTime);
                     currentProcess = null;
                 }
 
