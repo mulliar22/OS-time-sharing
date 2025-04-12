@@ -13,7 +13,7 @@ public class RoundRobinCycle {
         loadProcesses(); //Loads process.txt into the program
 
         Process currentProcess = processes.get(0); //sets current process to the first in the queue
-        int timeSclice = 5; //number of time slices
+        int timeSclice = 49; //number of time slices
         int delay = 2; //delay between process runtimes
         int accumulator = 0; //total runtime of program
         //while (processes.get(0) != null) {
