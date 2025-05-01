@@ -29,20 +29,27 @@ public class RoundRobinCycle {
 
                 accumulator +=  remain;
                 currentProcess.addTurnTime(remain + delay);
+
+                for (int i = 1; i <= processes.size() - 1; i++) { //adds time to all the remaining processes
+                    processes.get(i).addWTime(delay);
+                    processes.get(i).addWTime(remain);
+                    processes.get(i).addTurnTime(remain + delay);
+                }
             }
             else {
                 currentProcess.addWTime(delay);
                 currentProcess.addETime(timeSclice);
                 accumulator += timeSclice;
                 currentProcess.addTurnTime(timeSclice + delay);
+
+                for (int i = 1; i <= processes.size() - 1; i++) { //adds time to all the remaining processes
+                    processes.get(i).addWTime(delay);
+                    processes.get(i).addWTime(timeSclice);
+                    processes.get(i).addTurnTime(timeSclice + delay);
+                }
             }
 
 
-            for (int i = 1; i <= processes.size() - 1; i++) { //adds time to all the remaining processes
-                processes.get(i).addWTime(delay);
-                processes.get(i).addWTime(timeSclice);
-                processes.get(i).addTurnTime(timeSclice + delay);
-            }
 
 
             if (currentProcess.eTime >= currentProcess.tTime) { //removes process if it is completed

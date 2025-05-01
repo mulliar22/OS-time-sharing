@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2d2764b-aaf5-430b-a1a7-3b40d7976eab" name="Changes" comment="Fixed the PriorityCycle to include time slices">
-      <change beforePath="$PROJECT_DIR$/PriorityCycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/PriorityCycle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OS-time-sharing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OS-time-sharing/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e2d2764b-aaf5-430b-a1a7-3b40d7976eab" name="Changes" comment="Update processes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,6 +54,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -80,9 +78,10 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.FirstComeFirstServe.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.PriorityCycle.executor&quot;: &quot;Run&quot;,
-    &quot;Application.RoundRobinCycle.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RoundRobinCycle.executor&quot;: &quot;Debug&quot;,
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
     &quot;Gradle.OS-time-sharing.executor&quot;: &quot;Run&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
@@ -93,7 +92,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/amull/IdeaProjects/OS-time-sharing&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/amull/IdeaProjects/ImageComparisonProjectF&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -162,7 +161,12 @@
       <workItem from="1744393979673" duration="36000" />
       <workItem from="1744395780196" duration="257000" />
       <workItem from="1744477104295" duration="4195000" />
-      <workItem from="1744481350055" duration="635000" />
+      <workItem from="1744481350055" duration="2035000" />
+      <workItem from="1744564040088" duration="234000" />
+      <workItem from="1744588191501" duration="241000" />
+      <workItem from="1744638934229" duration="784000" />
+      <workItem from="1744830900285" duration="384000" />
+      <workItem from="1746133418069" duration="4024000" />
     </task>
     <task id="LOCAL-00001" summary="Added PriorityCycle">
       <option name="closed" value="true" />
@@ -188,7 +192,31 @@
       <option name="project" value="LOCAL" />
       <updated>1744481242434</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Set wait time to print">
+      <option name="closed" value="true" />
+      <created>1744483135987</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1744483135987</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updated Code">
+      <option name="closed" value="true" />
+      <created>1746137282799</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746137282799</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update processes">
+      <option name="closed" value="true" />
+      <created>1746137425172</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1746137425172</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +237,10 @@
     <MESSAGE value="Added PriorityCycle" />
     <MESSAGE value="Added Modified Output text / added priority numbers to processes.txt" />
     <MESSAGE value="Fixed the PriorityCycle to include time slices" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the PriorityCycle to include time slices" />
+    <MESSAGE value="Set wait time to print" />
+    <MESSAGE value="Updated Code" />
+    <MESSAGE value="Update processes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update processes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -218,6 +249,11 @@
           <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RoundRobinCycle.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
