@@ -16,13 +16,14 @@ public class Process {
         this.eTime = elapsedTime;
         this.wTime = waitTime;
         this.turnaroundTime = turnaroundTime;
+        this.entranceTime = entranceTime;
 
 
 
         System.out.println("Process ID: " + id + " totalTime: " + tTime + " elapsedTime: " + eTime + "  waitTime: " + wTime);
     }
 
-    public Process(int name, int totalTime, int elapsedTime, int waitTime, int turnaroundTime) {
+    public Process(int name, int totalTime, int elapsedTime, int waitTime, int priority) {
         this.id = name;
         this.tTime = totalTime;
         this.eTime = elapsedTime;
