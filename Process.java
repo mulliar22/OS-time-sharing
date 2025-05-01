@@ -6,21 +6,30 @@ public class Process {
     int tTime;
     int eTime;
     int wTime;
+    int turnaroundTime;
     int priority;
+    int entranceTime;
 
-    public Process(int name, int totalTime, int elapsedTime, int waitTime, int priority){
+    public Process(int name, int totalTime, int elapsedTime, int waitTime, int turnaroundTime, int entranceTime) {
+        this.id = name;
+        this.tTime = totalTime;
+        this.eTime = elapsedTime;
+        this.wTime = waitTime;
+        this.turnaroundTime = turnaroundTime;
+
+
+
+        System.out.println("Process ID: " + id + " totalTime: " + tTime + " elapsedTime: " + eTime + "  waitTime: " + wTime);
+    }
+
+    public Process(int name, int totalTime, int elapsedTime, int waitTime, int turnaroundTime) {
         this.id = name;
         this.tTime = totalTime;
         this.eTime = elapsedTime;
         this.wTime = waitTime;
         this.priority = priority;
-
-
-        System.out.println("Process ID: " + id + " totalTime: " + tTime + " elapsedTime: " + eTime + "  waitTime: " + wTime + " priority: " + priority);
     }
-    public void setID(int id){
 
-    }
 
     public void addETime(int cycles){
         eTime += cycles;
@@ -28,6 +37,10 @@ public class Process {
 
     public void addWTime(int cycles){
         wTime += cycles;
+    }
+
+    public void addTurnTime(int cycle) {
+        turnaroundTime += cycle;
     }
 
 

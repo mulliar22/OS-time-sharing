@@ -1,11 +1,10 @@
-import java.awt.print.PrinterGraphics;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.ArrayList;
 
 
-public class RoundRobinCycle {
+public class FirstComeFirstServe {
 
     //initialize dynamic length array for processes
     static ArrayList<Process> processes = new ArrayList<>();
@@ -14,34 +13,26 @@ public class RoundRobinCycle {
         loadProcesses(); //Loads process.txt into the program
 
         Process currentProcess = processes.get(0); //sets current process to the first in the queue
-        int timeSclice = 49; //number of time slices
         int delay = 2; //delay between process runtimes
         int accumulator = 0; //total runtime of program
         //while (processes.get(0) != null) {
         while(processes.size() != 0){ //rotates through process queue
             accumulator += 2;
             System.out.println("Process# " + currentProcess.id + " Started at clock cycle " + accumulator);
-            int remain = currentProcess.tTime - currentProcess.eTime; //amount of time remaining in a process
 
-            if (remain < timeSclice) {  //Checks if time remaining is less then time slice
-                currentProcess.addWTime(delay); //adds delay to wait time
-                currentProcess.addETime(remain); //adds remaining time to elapsed time
-
-                accumulator +=  remain;
-                currentProcess.addTurnTime(remain + delay);
-            }
-            else {
-                currentProcess.addWTime(delay);
-                currentProcess.addETime(timeSclice);
-                accumulator += timeSclice;
-                currentProcess.addTurnTime(timeSclice + delay);
-            }
+            currentProcess.addWTime(delay);
+            currentProcess.addETime(currentProcess.tTime);
+            currentProcess.addWTime(delay);
+            accumulator += currentProcess.tTime;
+            currentProcess.addTurnTime(currentProcess.eTime + delay);
 
 
             for (int i = 1; i <= processes.size() - 1; i++) { //adds time to all the remaining processes
                 processes.get(i).addWTime(delay);
-                processes.get(i).addWTime(timeSclice);
-                processes.get(i).addTurnTime(timeSclice + delay);
+                processes.get(i).addWTime(currentProcess.eTime);
+                processes.get(i).addWTime(delay);
+                processes.get(i).addTurnTime(currentProcess.eTime + delay);
+
             }
 
 
@@ -63,6 +54,7 @@ public class RoundRobinCycle {
                 currentProcess = roundRobin();
                 backToQueue(temp);
             }
+
 
         }
         System.out.println("All processes ended at clock cycle " + accumulator);
@@ -109,3 +101,4 @@ public class RoundRobinCycle {
 
 
 }
+
